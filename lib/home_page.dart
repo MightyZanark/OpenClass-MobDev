@@ -48,26 +48,30 @@ class HomePage extends StatelessWidget {
         ),
         const SizedBox(height: 50),
         const CustomLabel(label: 'Bio'),
-        // const SizedBox(height: 10),
         Row(children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            child: Text('Hello'),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: const Text(
+              'Gak tau mau isi apaan, mungkin nge plug GitHub aja :)\n'
+              'GitHub: https://github.com/MightyZanark',
+              style: TextStyle(fontSize: 15),
+            ),
           )
         ]),
         const SizedBox(height: 20),
         const CustomLabel(label: 'Motivasi'),
-        // const SizedBox(height: 10),
         Row(children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-            child: Text('Hello'),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            child: const Text(
+              'Motivasi saya ikut Mobile Development adalah karena saya ingin\n'
+              'belajar proses membuat suatu aplikasi agar bisa berkontribusi\n'
+              'terhadap aplikasi di GitHub yang saya cukup sering gunakan\n'
+              '(walaupun aplikasi tersebut dibuat dengan Java & Kotlin)',
+              style: TextStyle(fontSize: 15),
+            ),
           )
         ]),
-        // const Text(
-        //   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et augue hendrerit, vehicula magna ut, vestibulum leo. Donec augue mauris, cursus ut ex eget, suscipit pellentesque nibh. Aliquam sem lacus, commodo ac vulputate quis, maximus vitae diam. Quisque porttitor augue quis cursus mattis. Nulla elementum risus ac congue tristique. Phasellus vitae est at quam porta fermentum in sit amet massa. Maecenas condimentum aliquam iaculis. Phasellus sagittis cursus risus, at sodales elit molestie non.',
-        //   style: TextStyle(fontSize: 15),
-        // )
       ],
     ));
   }
