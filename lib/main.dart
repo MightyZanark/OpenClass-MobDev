@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './login_page.dart';
+import './home_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,64 +11,64 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: 'Hello World', home: LoginPage());
+    return MaterialApp(title: 'Hello World', home: HomePage());
   }
 }
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+// class LoginPage extends StatelessWidget {
+//   const LoginPage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        // mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-              decoration: const BoxDecoration(
-                  color: Color(0xFF5038BC),
-                  borderRadius:
-                      BorderRadius.vertical(bottom: Radius.circular(15))),
-              height: 450,
-              width: MediaQuery.of(context).size.width,
-              padding: EdgeInsets.only(top: 40),
-              child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
-                    Text('Ristek',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 100,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white)),
-                    LoginForm()
-                  ])),
-          Container(
-              margin: EdgeInsets.only(top: 25),
-              child: ElevatedButton(
-                  onPressed: () {},
-                  style: const ButtonStyle(
-                      backgroundColor:
-                          MaterialStatePropertyAll<Color>(Color(0xFF5038BC)),
-                      minimumSize:
-                          MaterialStatePropertyAll<Size>(Size(235, 45))),
-                  child: const Text(
-                    'LOGIN',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  )))
-        ],
-        // onPressed: () {
-        //   Navigator.push(context,
-        //       MaterialPageRoute(builder: (context) => const ProfilePage()));
-        // },
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Column(
+//         // mainAxisAlignment: MainAxisAlignment.start,
+//         children: [
+//           Container(
+//               decoration: const BoxDecoration(
+//                   color: Color(0xFF5038BC),
+//                   borderRadius:
+//                       BorderRadius.vertical(bottom: Radius.circular(15))),
+//               height: 450,
+//               width: MediaQuery.of(context).size.width,
+//               padding: EdgeInsets.only(top: 40),
+//               child: Column(
+//                   // mainAxisAlignment: MainAxisAlignment.end,
+//                   children: const [
+//                     Text('Ristek',
+//                         textAlign: TextAlign.center,
+//                         style: TextStyle(
+//                             fontSize: 100,
+//                             fontWeight: FontWeight.bold,
+//                             color: Colors.white)),
+//                     LoginForm()
+//                   ])),
+//           Container(
+//               margin: EdgeInsets.only(top: 25),
+//               child: ElevatedButton(
+//                   onPressed: () {},
+//                   style: const ButtonStyle(
+//                       backgroundColor:
+//                           MaterialStatePropertyAll<Color>(Color(0xFF5038BC)),
+//                       minimumSize:
+//                           MaterialStatePropertyAll<Size>(Size(235, 45))),
+//                   child: const Text(
+//                     'LOGIN',
+//                     textAlign: TextAlign.center,
+//                     style: TextStyle(
+//                         fontSize: 25,
+//                         fontWeight: FontWeight.bold,
+//                         color: Colors.white),
+//                   )))
+//         ],
+//         // onPressed: () {
+//         //   Navigator.push(context,
+//         //       MaterialPageRoute(builder: (context) => const ProfilePage()));
+//         // },
+//       ),
+//     );
+//   }
+// }
 
 const username = Text('Username',
     textAlign: TextAlign.left,
@@ -95,15 +97,27 @@ class _LoginFormState extends State<LoginForm> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Row(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              // crossAxisAlignment: CrossAxisAlignment.end,
-              children: [username],
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                username,
+                Container(
+                  decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(8))),
+                  child:
+                      TextField(style: TextStyle(fontWeight: FontWeight.bold)),
+                  margin: EdgeInsets.all(10),
+                  // height: 50,
+                  // width: 50,
+                )
+              ],
             ),
             // Spacer(flex: 2),
-            TextFormField(
-              decoration: InputDecoration(),
-            ),
+            // TextFormField(
+            //   decoration: InputDecoration(),
+            // ),
             Row(
               children: [password],
             )
