@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
                       color: Colors.white)),
               const SizedBox(height: 20),
               CircleAvatar(
-                  radius: 100,
+                  radius: 60,
                   child: ClipOval(
                       child: Image.network(
                           'https://avatars.githubusercontent.com/u/40352213?s=400&u=02455cdc45d5e0e85b481f843ffea19fc2848242&v=4'))),
@@ -64,10 +64,11 @@ class HomePage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: const Text(
-              'Motivasi saya ikut Mobile Development adalah karena saya ingin\n'
-              'belajar proses membuat suatu aplikasi agar bisa berkontribusi\n'
-              'terhadap aplikasi di GitHub yang saya cukup sering gunakan\n'
-              '(walaupun aplikasi tersebut dibuat dengan Java & Kotlin)',
+              'Motivasi saya ikut Mobile Development adalah karena \n'
+              'saya ingin belajar proses membuat suatu aplikasi agar \n'
+              'bisa berkontribusi terhadap aplikasi di GitHub yang \n'
+              'saya cukup sering gunakan (walaupun aplikasi tersebut \n'
+              'dibuat dengan Java & Kotlin)',
               style: TextStyle(fontSize: 15),
             ),
           )
